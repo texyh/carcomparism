@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <th>Model</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of results">
+      <td>{{car.name}}</td>
+      <td>{{car.result | currency}}</td>
+    </tr>
+  </tbody>
+</table>
