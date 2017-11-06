@@ -18,9 +18,16 @@ describe('CarComparismService', ()=> {
         expect(results.length).toBe(3);
     });
 
-    it('can be Calculate car price', () => {
-        let car = new Car('Honda', 2015, CarAttribute.LowMileage)
-        let price = carService.CalculatePrice(car)
-        
+    it('can Calculate car price', () => {
+        let car = new Car('Honda', 2015, CarAttribute.LowMileage);
+        let price = carService.CalculatePrice(car);
+        expect(price.result).toBe(18720);
+
+    });
+
+    it('can get percent based on attribue', () => {
+        let car = new Car('Honda', 2015, CarAttribute.LowMileage);
+        let percent = carService.GetAttribute(car);
+        expect(percent).toBe(1.04);
     });
 })
